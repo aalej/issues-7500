@@ -18,7 +18,7 @@ platform: macOS Sonoma 14.5
 
 Deploying using firebase-tools v13.11.2 works even when using `"./*"` in `hosting.ignore` array:
 
-````json
+```json
 {
   "hosting": {
     "public": "./dist",
@@ -83,4 +83,4 @@ Deploying using firebase-tools v13.14.2 works after removing `"./*"` from `hosti
     ]
   }
 }
-````
+```
