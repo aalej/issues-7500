@@ -1,0 +1,42 @@
+{
+  "name": "repro-7500",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "build-only": "vite build",
+    "deploy-prod": "npm run build-only && firebase deploy -P production",
+    "deploy-staging": "vite build --mode development && firebase deploy -P staging",
+    "type-check": "vue-tsc --noEmit --composite false",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "firebase": "10.12.4",
+    "vue": "3.4.30"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "1.10.3",
+    "@tsconfig/node20": "20.1.4",
+    "@types/jsdom": "21.1.6",
+    "@types/node": "20.14.9",
+    "@vitejs/plugin-vue": "5.0.5",
+    "@vue/eslint-config-typescript": "13.0.0",
+    "@vue/tsconfig": "0.5.1",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "9.26.0",
+    "jsdom": "24.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.38",
+    "sass": "1.77.6",
+    "typescript": "5.5.2",
+    "vite": "5.3.1",
+    "vue-tsc": "2.0.22"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
